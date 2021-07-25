@@ -1,0 +1,48 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     
+
+
+
+      <form [formGroup]="empForm" (ngSubmit)="updateEmployee(empForm.value)">
+        <input
+          type="text"
+          id="empname"
+         [(ngModel)]="this.employeeModel.employeeName"
+          formControlName="employeeName"
+          class="form-control"
+        />
+        <!-- "employeeName": "Rohit",
+                "age": 28,
+                "dateOfJoining": "12/03/2021",
+                "place": "Bangalore", -->
+        <input
+          type="text"
+          id="age"
+          [(ngModel)]="this.employeeModel.age"
+          formControlName="age"
+          class="form-control"
+        />
+        <input
+          type="text"
+          id="doj"
+          [(ngModel)]="this.employeeModel.dateofjoining"
+          formControlName="dateOfJoining"
+          class="form-control"
+        />
+        <input
+          type="text"
+          id="place"
+          [(ngModel)]="this.employeeModel.place"
+          formControlName="place"
+          class="form-control"
+        />
+        <input type="submit" value="Upadate Employee" class="btn btn-primary" />
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <tr>
+          <td>Name</td>
+          <td>Age</td>
+          <td>DOJ</td>
+          <td>Place</td>
+          <td>Action</td>
+        </tr>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.employeeName }}</td>
+          <td>{{ employee.age }}</td>
+          <td>{{ employee.dateOfJoining }}</td>
+          <td>{{ employee.place }}</td>
+          <td><a (click)="updateEmployeeComponent(employee.empid)">Edit</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
